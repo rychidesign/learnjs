@@ -11,8 +11,8 @@ getQrBttn.addEventListener('click', function() {
 //sestaveni vcf
 let vcf = `BEGIN:VCARD
 VERSION:4.0
-FN:Jiří Rysanek
-N:Rysanek;Jiri;;;
+FN:Jiri Rysanek
+N:Rysanek;Jiri
 BDAY:--1011
 GENDER:M
 EMAIL;TYPE=work:jiri.rysanek@vkontextu.cz
