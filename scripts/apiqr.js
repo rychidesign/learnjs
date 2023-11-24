@@ -9,14 +9,15 @@ getQrBttn.addEventListener('click', function() {
     //kontrola vyplnenych poli
     
 //sestaveni vcf
-let vcf = `BEGIN:VCARD
-VERSION:4.0
-FN:Jiri Rysanek
-N:Rysanek;Jiri
-BDAY:--1011
-GENDER:M
-EMAIL;TYPE=work:jiri.rysanek@vkontextu.cz
-END:VCARD
+let vcf = [
+'BEGIN:VCARD',
+VERSION:4.0',
+FN:Jiri Rysanek',
+'N:Rysanek;Jiri',
+'BDAY:--1011',
+'GENDER:M',
+'EMAIL;TYPE=work:jiri.rysanek@vkontextu.cz',
+'END:VCARD'
 `
     
     
