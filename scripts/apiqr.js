@@ -18,7 +18,7 @@ let vcf = [
 'GENDER:M',
 'EMAIL;TYPE=work:jiri.rysanek@vkontextu.cz',
 'END:VCARD'
-`
+];
     
     
     
