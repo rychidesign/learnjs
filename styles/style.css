@@ -1,348 +1,364 @@
 :root{
 
-    --background: #122323;
-    --background_01: #233434;
-    --foreground: #aaabab;
-    --accent: #ffff00;
-    --green:hsl(150, 70%, 40%);
-    --red:hsl(350, 55%, 50%);
-  }
-  *{
-    transition: all 0.3s ease-out;
-    margin:0px;
-    padding:0px;
-  }
-  *, *:before, *:after, :root{
-    box-sizing: border-box;
-  }
-  body{
-    background:var(--background);
-    color:var(--foreground);
-    font-family:monospace;
-    font-size:1rem;
-    line-height:1.4;
-    padding:8px;
-    width:100%;
-  }
-  .head_wrapper{
-    width:100%;
-    height:40px;
-    position:relative;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:stretch;
-  }
-  p.head{
-    font-size:0.8rem;
-    color:var(--foreground);
-    letter-spacing: 0.05rem;
-  }
-  .icon{
-    width:40px;
-    height:40px;
-    background: #12232388;
-    border-radius:100px;
-    position:absolute;
-    right:0px;
-  }
-  .icon_image{
-    width:24px;
-    height:24px;
-    margin:8px;
-    opacity:0.7;
-  }
-  .h_line{
-    width:100%;
-    border-top:1px dashed;
-    border-color:var(--foreground);
-    opacity:0.6;
-    margin: 20px 0px;
-    clear:both;
-  }
-  .button{
-    display:block;
-    text-decoration:none;
-    background:var(--foreground);
-    border-radius:4px;
-    padding:16px 0;
-    text-align:center;
-    text-transform: uppercase;
-    font-size:0.7rem;
-    font-weight:700;
-    color:var(--background);
-    margin-top: 10px;
-    border: 0px;
-    width: 100%;
-  }
-  .secondary{
-    background:var(--background);
-    color:var(--foreground);
-  }
-  .button:active{
-    background:var(--background);
-    color:var(--foreground);
-  }
-  .content_box{
-    text-decoration:none;
-    display:block;
-    width:100%;
-    padding:16px;
-    margin-bottom:8px;
-    border-radius:8px;
-    background:var(--background_01);
-    clear:both;
-  }
-  .footer_box{
-    background:transparent;
-  }
-  .footer_wrapper{
-    width:100%;
-    height:140px;
-    padding:20px 0 0 0;
-    position:relative;
-    opacity:0.6;
-  }
-  p.footer{
-    font-size:0.8rem;
-    color:var(--foreground);
-    letter-spacing: 0.05rem;
-    margin-bottom:5px;
-    display:inline-block;
-  }
-  #system_wrapper{
-    width:100%;
-    aspect-ratio:1/1;
-    margin-bottom:20px;
-  }
-  #solar_system{
-    width:100%;
-    aspect-ratio:1/1;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-  }
-  #sun{
-    width:80px;
-    height:80px;
-    border-radius:40px;
-    background: var(--foreground);
-  }
-  #sun_orbit{
-    width:280px;
-    height:280px;
-    border:1px dashed;
-    border-color: var(--foreground);
-    opacity:0.4;
-    border-radius:200px;
-    position:absolute;
-  }
-  #earth_system{
-    width:100%;
-    aspect-ratio:1/1;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    position:absolute;
-    top:0px;
-    z-index:1;
-  }
-  #earth_orbit{
-    width:296px;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:right;
-    position:relative;
-  }
-  #earth{
-    width:16px;
-    height:16px;
-    border-radius:8px;
-    background: var(--foreground);
-  }
-  
-    #merkur_system{
-    width:100%;
-    aspect-ratio:1/1;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    position:absolute;
-    top:0px;
-    z-index:2;
-  }
-  #merkur_orbit{
-    width:140px;
-    height:140px;
-    border-radius:70px;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:right;
-    position:relative;
-  }
-  #merkur{
-    width:10px;
-    height:10px;
-    margin-right:-5px;
-    border-radius:8px;
-    background: var(--foreground);
-  }
-  
-  
-  #venuse_system{
-    width:100%;
-    aspect-ratio:1/1;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    position:absolute;
-    top:0px;
-    z-index:2;
-  }
-  #venuse_orbit{
-    width:200px;
-    height:200px;
-    border-radius:140px;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:left;
-    position:relative;
-  }
-  #venuse{
-    width:12px;
-    height:12px;
-    margin-left:-6px;
-    border-radius:8px;
-    background: var(--foreground);
-  }
-  
-  
-  #moon_orbit{
-    width:50px;
-    height:50px;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:right;
-    position:absolute;
-    right:-20px;
-  }
-  #moon{
-    width:4px;
-    height:4px;
-    border-radius:8px;
-    background:var(--foreground);
-  }
-  #earth_orbit{
-    animation: rotate 10s linear infinite;
-  }
-  #merkur_orbit{
-    animation: rotate 3s linear infinite;
-  }
-  #venuse_orbit{
-    animation: rotate 6s linear infinite;
-  }
-  #moon_orbit{
-    animation: rotate 1s linear infinite;
-  }
-  @keyframes rotate{
-    to{ transform: rotate(-360deg); }
-  }
-  .pause{
-    animation-play-state: paused!important;
-  }
+  --background: #122323;
+  --background_01: #233434;
+  --foreground: #aaabab;
+  --accent: #ffff00;
+  --green:hsl(150, 70%, 40%);
+  --red:hsl(350, 55%, 50%);
+}
+*{
+  transition: all 0.3s ease-out;
+  margin:0px;
+  padding:0px;
+}
+*, *:before, *:after, :root{
+  box-sizing: border-box;
+}
+body{
+  background:var(--background);
+  color:var(--foreground);
+  font-family:monospace;
+  font-size:1rem;
+  line-height:1.4;
+  padding:8px;
+  width:100%;
+}
+.head_wrapper{
+  width:100%;
+  height:40px;
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:stretch;
+}
+p{
+  color:var(--foreground);
+}
+p.head{
+  font-size:0.8rem;
+  color:var(--foreground);
+  letter-spacing: 0.05rem;
+}
+.icon{
+  width:40px;
+  height:40px;
+  background: #12232388;
+  border-radius:100px;
+  position:absolute;
+  right:0px;
+}
+.icon_image{
+  width:24px;
+  height:24px;
+  margin:8px;
+  opacity:0.7;
+}
+.h_line{
+  width:100%;
+  border-top:1px dashed;
+  border-color:var(--foreground);
+  opacity:0.6;
+  margin: 20px 0px;
+  clear:both;
+}
+.buttons_wrapper{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:stretch;
+  column-gap:20px;
+}
+.button{
+  display:block;
+  text-decoration:none;
+  background:var(--foreground);
+  border-radius:4px;
+  padding:16px 0;
+  text-align:center;
+  text-transform: uppercase;
+  font-size:0.7rem;
+  font-weight:700;
+  color:var(--background);
+  margin-top: 10px;
+  border: 0px;
+  width: 100%;
+}
+.secondary{
+  background:var(--background);
+  color:var(--foreground);
+}
+.button:active{
+  background:var(--background);
+  color:var(--foreground);
+}
+.content_box{
+  text-decoration:none;
+  display:block;
+  width:100%;
+  padding:16px;
+  margin-bottom:8px;
+  border-radius:8px;
+  background:var(--background_01);
+  clear:both;
+}
+.footer_box{
+  background:transparent;
+}
+.footer_wrapper{
+  width:100%;
+  height:140px;
+  padding:20px 0 0 0;
+  position:relative;
+  opacity:0.6;
+}
+p.footer{
+  font-size:0.8rem;
+  color:var(--foreground);
+  letter-spacing: 0.05rem;
+  margin-bottom:5px;
+  display:inline-block;
+}
+#system_wrapper{
+  width:100%;
+  aspect-ratio:1/1;
+  margin-bottom:20px;
+}
+#solar_system{
+  width:100%;
+  aspect-ratio:1/1;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+#sun{
+  width:80px;
+  height:80px;
+  border-radius:40px;
+  background: var(--foreground);
+}
+#sun_orbit{
+  width:280px;
+  height:280px;
+  border:1px dashed;
+  border-color: var(--foreground);
+  opacity:0.4;
+  border-radius:200px;
+  position:absolute;
+}
+#earth_system{
+  width:100%;
+  aspect-ratio:1/1;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  top:0px;
+  z-index:1;
+}
+#earth_orbit{
+  width:296px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:right;
+  position:relative;
+}
+#earth{
+  width:16px;
+  height:16px;
+  border-radius:8px;
+  background: var(--foreground);
+}
+
+  #merkur_system{
+  width:100%;
+  aspect-ratio:1/1;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  top:0px;
+  z-index:2;
+}
+#merkur_orbit{
+  width:140px;
+  height:140px;
+  border-radius:70px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:right;
+  position:relative;
+}
+#merkur{
+  width:10px;
+  height:10px;
+  margin-right:-5px;
+  border-radius:8px;
+  background: var(--foreground);
+}
+
+
+#venuse_system{
+  width:100%;
+  aspect-ratio:1/1;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  top:0px;
+  z-index:2;
+}
+#venuse_orbit{
+  width:200px;
+  height:200px;
+  border-radius:140px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:left;
+  position:relative;
+}
+#venuse{
+  width:12px;
+  height:12px;
+  margin-left:-6px;
+  border-radius:8px;
+  background: var(--foreground);
+}
+
+
+#moon_orbit{
+  width:50px;
+  height:50px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:right;
+  position:absolute;
+  right:-20px;
+}
+#moon{
+  width:4px;
+  height:4px;
+  border-radius:8px;
+  background:var(--foreground);
+}
+#earth_orbit{
+  animation: rotate 10s linear infinite;
+}
+#merkur_orbit{
+  animation: rotate 3s linear infinite;
+}
+#venuse_orbit{
+  animation: rotate 6s linear infinite;
+}
+#moon_orbit{
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate{
+  to{ transform: rotate(-360deg); }
+}
+.pause{
+  animation-play-state: paused!important;
+}
 
 
 
-  .generator_wrapper{
-    width:100%;
-    height:40px;
-    margin:20px 0;
-    position:relative;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:start;
-  }
-  #color_swatch{
-    width:24px;
-    height:24px;
-    border-radius:3px;
-    margin-right:20px;
-    background:var(--foreground);
-  }
-  
-  
-  
+.generator_wrapper{
+  width:100%;
+  height:40px;
+  margin:20px 0;
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:start;
+}
+#color_swatch{
+  width:24px;
+  height:24px;
+  border-radius:3px;
+  margin-right:20px;
+  background:var(--foreground);
+}
+
+
+
 #inflation_wrapper{
-    width:100%;
-    margin:20px 0;
-  }
+  width:100%;
+  margin:20px 0;
+}
 .p_country{
-    display:inline-block;
-    width:50%;
+  display:inline-block;
+  width:50%;
 }
 .p_month, .p_year{
-    display:inline-block;
-    width:25%;
+  display:inline-block;
+  width:25%;
 }
 .align_right{
-    text-align:right;
+  text-align:right;
 }
 .green{
-    color:hsl(150, 70%, 40%);
+  color:hsl(150, 70%, 40%);
 }
 .red{
-    color:hsl(350, 55%, 50%);
+  color:hsl(350, 55%, 50%);
 }
 
 
 #form_wrapper{
-    width:100%;
-    margin:20px 0;
+  width:100%;
+  margin:20px 0;
 }
 input, input:focus, input:active{
-    height: 56px;
-    width: 100%;
-    background: var(--background);
-    color: var(--foreground);
-    border: 0px;
-    border-bottom:1px solid var(--background);
-    border-radius: 4px;
-    padding: 12px;
-    font-family:monospace;
-    font-size:1rem;
-    line-height:1.4;
-    outline:none;
+  height: 56px;
+  width: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  border: 0px;
+  border-bottom:1px solid var(--background);
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-family:monospace;
+  font-size:1rem;
+  line-height:1.4;
+  outline:none;
 }
 input:focus{
-    border-bottom:1px solid var(--background);
+  border-bottom:1px solid var(--background);
 }
 input::placeholder{
-    color:var(--foreground);
-    opacity:0.4;
+  color:var(--foreground);
+  opacity:0.4;
 }
 .validator_wrapper{
-    padding:10px 0;
+  padding-bottom:10px;
 }
 p.small{
-    font-size:0.7rem;
-    line-height:1.4;
+  font-size:0.7rem;
+  line-height:1.4;
 }
 
 #qr_wrapper{
-    width:100%;
-    margin:20px 0;
+  width:100%;
+  margin:20px 0;
 }
 #qr_image{
-    width:100%;
-    aspect-ratio: 1/1;
+  width:100%;
+  aspect-ratio: 1/1;
+  margin: 30px 0;
+}
+#qr_image svg{
+  border-radius: 4px;
 }

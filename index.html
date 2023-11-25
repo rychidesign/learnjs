@@ -2,36 +2,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/assets/qrcode.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
-    <div class="content_box" id="mode_toggler">
-    <div class="head_wrapper">
-      <div class="icon">
-        <img class="icon_image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIGQ9Ik01LjI1IDE0aDQuNDE3bC0uOTEyIDguNjIxQTEuMjUyIDEuMjUyIDAgMCAwIDEwIDI0Yy4zOTIgMCAuNzY2LS4xODggMS4wMTQtLjUyMUwxOS43NSAxMWExLjI1MiAxLjI1MiAwIDAgMC0xLTJoLTUuNDA2bC45LTcuNjAzYy4wMDMtLjAyOS4wMDUtLjExOC4wMDUtLjE0N0ExLjI1IDEuMjUgMCAwIDAgMTMgMGMtLjM5MiAwLS43NjYuMTg4LTEuMDIyLjUzMUw0LjI1IDEyYTEuMjUyIDEuMjUyIDAgMCAwIDEgMnoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+" />
-      </div>
-      <p class="head">theme toggler</p>
-    </div>
-  </div>
-  
-  <div class="content_box">
-    <div class="head_wrapper">
-      <div class="icon">
-        <img class="icon_image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9IiI+PGc+PHBhdGggZD0iTTE5LjM3NSAxNC43MnMyLjQ3IDIuNTI0IDIuNDcgNS4wM2EzLjAwMSAzLjAwMSAwIDAgMS02IDBjMC0yLjUwNiAyLjQ2OS01LjAzIDIuNDY5LTUuMDNhLjc1Ljc1IDAgMCAxIDEuMDYxIDB6TTE4LjQ1NiAxMi45MzRsLTUuNjU3IDUuNjU3YTMuNzUgMy43NSAwIDAgMS01LjMwMyAwbC00LjI0Mi00LjI0MmEzLjc1MSAzLjc1MSAwIDAgMSAwLTUuMzA0bDYuMzYzLTYuMzYzYS43NS43NSAwIDAgMSAxLjA2MSAwbDcuNzc4IDcuNzc3YTEuNzUgMS43NSAwIDAgMSAwIDIuNDc1em0tMS4wNjEtMS4wNmEuMjUuMjUgMCAwIDAgMC0uMzU0bC03LjI0Ny03LjI0Ny01LjgzMyA1LjgzM2EyLjI1IDIuMjUgMCAwIDAgMCAzLjE4Mmw0LjI0MiA0LjI0MmEyLjI1IDIuMjUgMCAwIDAgMy4xODIgMHoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48cGF0aCBkPSJNMTEuODkgMy44OTRhLjc1Ljc1IDAgMSAxLTEuMDYxIDEuMDYxTDguNDA1IDIuNTNhLjc0OS43NDkgMCAxIDEgMS4wNjEtMS4wNnpNMi45MDUgMTAuOTQ3aDE1LjMxM2EuNzUuNzUgMCAwIDEgLjc1Ljc1YzAgLjQ0OC0uMTcxLjg5Ni0uNTEyIDEuMjM3bC01LjY1NyA1LjY1N2EzLjc1IDMuNzUgMCAwIDEtNS4zMDMgMGwtNC4yNDItNC4yNDJhMy43NTUgMy43NTUgMCAwIDEtMS4wOTktMi42NTIuNzUuNzUgMCAwIDEgLjc1LS43NXoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48L2c+PC9zdmc+" />
-      </div>
-      <p class="head">color generator</p>
-    </div>
-    <div class="generator_wrapper">
-      <div id="color_swatch"></div>
-      <div class="color_hsla">
-        <p id="color_hsla">hsla(360, 100%, 100%, 0.7)</p>
-      </div>
-    </div>
-    <div class="button" id="color_applicator">generate theme</div>
-  </div>
-  
+
     <div class="content_box">
     <div class="head_wrapper">
       <div class="icon">
@@ -112,14 +87,44 @@
       <p class="head">qr generator</p>
     </div>
     <div id="qr_wrapper">
-        <input type="text" name="in_url" id="in_url" placeholder="type url" value="https://"/>
+        <input type="text" name="in_company" id="in_name" placeholder="John" value=""/>
+        <input type="text" name="in_company" id="in_surename" placeholder="Doe" value=""/>
+        <input type="text" name="in_company" id="in_company" placeholder="Vkontextu" value=""/>
+        <input type="text" name="in_company" id="in_phone" placeholder="+420 777 666 555" value=""/>
+        <input type="text" name="in_company" id="in_email" placeholder="john.doe@vkontextu.cz" value=""/>
         <div class="button" id="generate_qr" href="#">generate qr code</div>
-
-
-        <svg id="qr_image" src="" alt="" />
         
-        </svg>
+        <div id="qr_image" src="" alt=""></div>
     </div>
+    <div class="buttons_wrapper">
+      <div class="button secondary half" id="save_qr_bttn">save [↓]</div>
+      <div class="button secondary half" id="share_qr_bttn">share [↗]</div>
+    </div>
+  </div>
+
+  <div class="content_box" id="mode_toggler">
+    <div class="head_wrapper">
+      <div class="icon">
+        <img class="icon_image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIGQ9Ik01LjI1IDE0aDQuNDE3bC0uOTEyIDguNjIxQTEuMjUyIDEuMjUyIDAgMCAwIDEwIDI0Yy4zOTIgMCAuNzY2LS4xODggMS4wMTQtLjUyMUwxOS43NSAxMWExLjI1MiAxLjI1MiAwIDAgMC0xLTJoLTUuNDA2bC45LTcuNjAzYy4wMDMtLjAyOS4wMDUtLjExOC4wMDUtLjE0N0ExLjI1IDEuMjUgMCAwIDAgMTMgMGMtLjM5MiAwLS43NjYuMTg4LTEuMDIyLjUzMUw0LjI1IDEyYTEuMjUyIDEuMjUyIDAgMCAwIDEgMnoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+" />
+      </div>
+      <p class="head">theme toggler</p>
+    </div>
+  </div>
+
+  <div class="content_box">
+    <div class="head_wrapper">
+      <div class="icon">
+        <img class="icon_image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9IiI+PGc+PHBhdGggZD0iTTE5LjM3NSAxNC43MnMyLjQ3IDIuNTI0IDIuNDcgNS4wM2EzLjAwMSAzLjAwMSAwIDAgMS02IDBjMC0yLjUwNiAyLjQ2OS01LjAzIDIuNDY5LTUuMDNhLjc1Ljc1IDAgMCAxIDEuMDYxIDB6TTE4LjQ1NiAxMi45MzRsLTUuNjU3IDUuNjU3YTMuNzUgMy43NSAwIDAgMS01LjMwMyAwbC00LjI0Mi00LjI0MmEzLjc1MSAzLjc1MSAwIDAgMSAwLTUuMzA0bDYuMzYzLTYuMzYzYS43NS43NSAwIDAgMSAxLjA2MSAwbDcuNzc4IDcuNzc3YTEuNzUgMS43NSAwIDAgMSAwIDIuNDc1em0tMS4wNjEtMS4wNmEuMjUuMjUgMCAwIDAgMC0uMzU0bC03LjI0Ny03LjI0Ny01LjgzMyA1LjgzM2EyLjI1IDIuMjUgMCAwIDAgMCAzLjE4Mmw0LjI0MiA0LjI0MmEyLjI1IDIuMjUgMCAwIDAgMy4xODIgMHoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48cGF0aCBkPSJNMTEuODkgMy44OTRhLjc1Ljc1IDAgMSAxLTEuMDYxIDEuMDYxTDguNDA1IDIuNTNhLjc0OS43NDkgMCAxIDEgMS4wNjEtMS4wNnpNMi45MDUgMTAuOTQ3aDE1LjMxM2EuNzUuNzUgMCAwIDEgLjc1Ljc1YzAgLjQ0OC0uMTcxLjg5Ni0uNTEyIDEuMjM3bC01LjY1NyA1LjY1N2EzLjc1IDMuNzUgMCAwIDEtNS4zMDMgMGwtNC4yNDItNC4yNDJhMy43NTUgMy43NTUgMCAwIDEtMS4wOTktMi42NTIuNzUuNzUgMCAwIDEgLjc1LS43NXoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48L2c+PC9zdmc+" />
+      </div>
+      <p class="head">color generator</p>
+    </div>
+    <div class="generator_wrapper">
+      <div id="color_swatch"></div>
+      <div class="color_hsla">
+        <p id="color_hsla">hsla(360, 100%, 100%, 0.7)</p>
+      </div>
+    </div>
+    <div class="button" id="color_applicator">generate theme</div>
   </div>
 
   <div class="content_box footer_box">
@@ -129,13 +134,13 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/scripts/apiinflation.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/scripts/apiqr.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/scripts/theme.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/scripts/orbit.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/scripts/colorgenerator.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/scripts/formfeatures.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/rychidesign/learnjs/scripts/cookiepars.js"></script>
+  <script src="scripts/apiinflation.js"></script>
+  <script src="scripts/qrgenerator.js"></script>
+  <script src="scripts/theme.js"></script>
+  <script src="scripts/orbit.js"></script>
+  <script src="scripts/colorgenerator.js"></script>
+  <script src="scripts/formfeatures.js"></script>
+  <script src="scripts/cookiepars.js"></script>
 
 </body>
 </html>
